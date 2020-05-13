@@ -28,16 +28,16 @@ This creates a dataframe that stores the feature importance, according to your D
 If you look at the feature importance table you just built (e.g. by running the following line of code: ```df_imp.head(10)``` ), you'll see something like this:
 |feature|importance|
 |---|---|
-away__suffered|0.356907
-away__scored|0.227553
-home__scored|0.224549
-home__suffered|0.187731
-away__avg_suffered_5|0.003259
-away__avg_scored_5|0.000000
-away__avg_suffered_3|0.000000
-away__avg_scored_3|0.000000
-away__delta_minus_4|0.000000
-away__delta_minus_3|0.000000
+|away__suffered|0.356907|
+|away__scored|0.227553|
+|home__scored|0.224549|
+|home__suffered|0.187731|
+|away__avg_suffered_5|0.003259|
+|away__avg_scored_5|0.000000|
+|away__avg_suffered_3|0.000000|
+|away__avg_scored_3|0.000000|
+|away__delta_minus_4|0.000000|
+|away__delta_minus_3|0.000000|
 
 Features with a higher score are considered more important by your model.
 This clearly shows that the model was quite shrewd in understanding that the features on the top rows are indeed very informative about the result of the game (please check the dictionary if you're not sure what they are). **In fact, they are all you need to know in order to accurately predict the result of the game!**. After all, you should be able to infer the result of a soccer game if you know how much goals the visiting and home teams scored.
@@ -56,14 +56,14 @@ You should be presented with an output quite similar to what we see below:
 
 ||home__val|away__val|home__scored|home__suffered|home__avg_scored_3|home__avg_suffered_3
 |---|---|---|---|---|---|---|
-count|3042.000000|3042.000000|3042.000000|3042.000000|3042.000000|3042.000000
-mean|46780.108481|46900.460224|1.450033|1.089086|1.086675|1.280517
-std|77869.625111|78471.921279|1.274920|1.113555|0.855126|0.802040
-**min**|**0.000000**|**0.000000**|**0.000000**|**0.000000**|**0.000000**|**0.000000**
-25%|0.000000|0.000000|1.000000|0.000000|0.333333|0.666667
-50%|15350.000000|14950.000000|1.000000|1.000000|1.000000|1.333333
-75%|26380.000000|28650.000000|2.000000|2.000000|1.666667|1.666667
-**max**|**314700.000000**|**314700.000000**|**10.000000**|**8.000000**|**5.666667**|**5.333333**
+|count|3042.000000|3042.000000|3042.000000|3042.000000|3042.000000|3042.000000|
+|mean|46780.108481|46900.460224|1.450033|1.089086|1.086675|1.280517|
+|std|77869.625111|78471.921279|1.274920|1.113555|0.855126|0.802040|
+|**min**|**0.000000**|**0.000000**|**0.000000**|**0.000000**|**0.000000**|**0.000000**|
+|25%|0.000000|0.000000|1.000000|0.000000|0.333333|0.666667|
+|50%|15350.000000|14950.000000|1.000000|1.000000|1.000000|1.333333|
+|75%|26380.000000|28650.000000|2.000000|2.000000|1.666667|1.666667|
+|**max**|**314700.000000**|**314700.000000**|**10.000000**|**8.000000**|**5.666667**|**5.333333**|
 
 The relevant rows for the analysis we're doing here are highlighted in bold.
 In particular, if you look at the minimum and maximum values for each column, you'll see that the **xxx_val** features have a very different range from the other variables!
